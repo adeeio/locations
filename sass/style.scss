@@ -1,32 +1,27 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background: gray;
+  background: gray;
+  height: 100%;
+  position: relative;
 }
 
 .carousel-cell {
-    width: 100%;
-    min-height: 250px;
-    height: 50%;
-    margin-right: 10px;
-    background: red;
-    background-image: linear-gradient(red, white,green);
-    background-size: cover;
+  width: 100%;
+  min-height: 250px;
+  height: 50%;
+  margin-right: 10px;
+  background: red;
+  background-image: linear-gradient(red, white, green);
+  background-size: cover;
 }
 
 .container {
-    max-width: 1200px;
-    background: yellow;
-    text-align: center;
+  max-width: 1200px;
+  background: yellow;
+  text-align: center;
 }
 
-.main-carousel {
-    position: relative;
-}
 
-.close {
-    position: absolute;
-    right: 100;
-}

@@ -4,6 +4,8 @@
 
 body {
   background: gray;
+  height: 100%;
+  position: relative;
 }
 
 .carousel-cell {
@@ -20,15 +22,6 @@ body {
   max-width: 1200px;
   background: yellow;
   text-align: center;
-}
-
-.main-carousel {
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  right: 100;
 }
 
 /*# sourceMappingURL=style.css.map */
