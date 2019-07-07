@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: gray;
+}
+
+.carousel-cell {
+  width: 100%;
+  min-height: 250px;
+  height: 50%;
+  margin-right: 10px;
+  background: red;
+  background-image: linear-gradient(red, white, green);
+  background-size: cover;
+}
+
+.container {
+  max-width: 1200px;
+  background: yellow;
+  text-align: center;
+}
+
+.main-carousel {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 100;
+}
+
+/*# sourceMappingURL=style.css.map */
