@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "latest-version": "^5.1.0",
+    "mustache": "^3.0.1",
     "normalize.css": "^8.0.1",
     "postcss-cli-simple": "^3.0.0"
   }
