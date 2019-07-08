@@ -13,24 +13,62 @@
 
 <body>
     <button class="restart">Restart</button>
-    <div class="main-carousel"> 
+    <div class="main-carousel">
         <div class="carousel-cell carousel-cell--image1" id="carousel-cell1">
-            <div class="container">one</div>
+
         </div>
-        <div class="carousel-cell carousel-cell--image2" id="carousel-cell2">
-            <div class="container">two</div>
+        <div class="carousel-cell" id="carousel-cell2">
+
         </div>
-        <div class="carousel-cell carousel-cell--image3" id="carousel-cell3">
-            <div class="container ">three</div>
+        <div class="carousel-cell" id="carousel-cell3">
+
         </div>
-        <div class="carousel-cell carousel-cell--image4" id="carousel-cell4">
-            <div class="container">four</div>
+        <div class="carousel-cell" id="carousel-cell4">
+
         </div>
-        <div class="carousel-cell carousel-cell--image5" id="carousel-cell5">
-            <div class="container">five</div>
+        <div class="carousel-cell" id="carousel-cell5">
+
         </div>
     </div>
     <div class="progress-bar"></div>
+
+    <script id="template-places" type="x-tmpl-mustache">
+        <div class="container">
+            <h2> {{ title }} </h2> 
+           <img src= {{{ image }}} height="80%" width="100%">
+            {{{ description }}}
+        </div>
+    </script>
+
+    <script>
+        var templateData = [
+            {
+                image: 'https://www.white-ibiza.com/wp-content/uploads/privilege-dome-073020122.jpg',
+                title: 'Privilege',
+                description: "<p>Lorem ipsum.</p>"
+            },
+            {
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSyLcUdcT-R6xKclq4F7_c3SgB1wrD92vR8qTV0Yg0NC2f4iOR',
+                title: 'Amnesia',
+                description: "<p>Lorem ipsum.</p>"
+            },
+            {
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxNyUO-arp4pp2BT2BQs3qsuEFSGepVTYQB2wdj8cnI2XB9g8N',
+                title: 'Cafe Mambo',
+                description: "<p>Lorem ipsum.</p>"
+            },
+            {
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM8TSa69lTc3sExGPQyKvQi4J4I3DlI1vwYmEZC_-Kq_ILrswv',
+                title: 'Pacha',
+                description: "<p>Lorem ipsum.</p>"
+            },
+            {
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSb6goVlXChQV8klTzYFWBQZrjsfyCvv-bX_llLxOxGPLgkDMp',
+                title: 'Space',
+                description: "<p>Lorem ipsum.</p>"
+            }
+        ]
+    </script>
 
 
     <script src="vendor/flickity.pkgd.min.js"></script>

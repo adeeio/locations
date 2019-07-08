@@ -1,5 +1,14 @@
 'use strict';
 
+var templateItem = document.getElementById('template-places').innerHTML;
+var carouselCell = document.querySelectorAll('.carousel-cell');
+Mustache.parse(templateItem);
+
+for(var i = 0; i < templateData.length; i++){
+    carouselCell[i].innerHTML = Mustache.render(templateItem, templateData[i]);
+}
+
+
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity(elem, {
     cellAlign: 'left',
@@ -28,4 +37,6 @@ var progressBar = document.querySelector('.progress-bar');
 flkty.on('scroll', function(progress) {
     progress = Math.max(0, Math.min(1, progress));
     progressBar.style.width = progress * 100 + '%';
-})
+});
+
+

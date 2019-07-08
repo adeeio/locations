@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -26,6 +28,8 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 .restart {
@@ -43,26 +47,6 @@ body {
   height: 20px;
   width: 0;
   background: rgba(216, 124, 19, 0.856);
-}
-
-.carousel-cell--image1 {
-  background-image: url(https://images.pexels.com/photos/236636/pexels-photo-236636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
-}
-
-.carousel-cell--image2 {
-  background-image: url(https://images.pexels.com/photos/87403/cheetah-leopard-animal-big-87403.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
-}
-
-.carousel-cell--image3 {
-  background-image: url(https://images.pexels.com/photos/62289/yemen-chameleon-chamaeleo-calyptratus-chameleon-reptile-62289.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
-}
-
-.carousel-cell--image4 {
-  background-image: url(https://images.pexels.com/photos/158471/ibis-bird-red-animals-158471.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
-}
-
-.carousel-cell--image5 {
-  background-image: url(https://images.pexels.com/photos/1431465/pexels-photo-1431465.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
 }
 
 /*# sourceMappingURL=style.css.map */
