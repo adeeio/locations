@@ -1,5 +1,23 @@
 'use strict';
 
+window.initMap = function(){
+    var privilege = templateData[0].coords;
+    console.log(privilege);
+    var map = new google.maps.Map(document.getElementById('map'), {zoom: 18, center: privilege});
+
+    for(var i = 0; i < templateData.length; i++){
+        var marker = new google.maps.Marker({position: templateData[i].coords, map: map});
+    }
+
+    
+    marker.addListener('click', function(){
+        infos.innerHTML = "You clicked marker";
+    });
+}
+
+
+
+
 var templateItem = document.getElementById('template-places').innerHTML;
 var carouselCell = document.querySelectorAll('.carousel-cell');
 Mustache.parse(templateItem);

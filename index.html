@@ -18,19 +18,22 @@
 
         </div>
         <div class="carousel-cell" id="carousel-cell2">
-
         </div>
         <div class="carousel-cell" id="carousel-cell3">
-
         </div>
         <div class="carousel-cell" id="carousel-cell4">
-
         </div>
         <div class="carousel-cell" id="carousel-cell5">
-
         </div>
+
     </div>
     <div class="progress-bar"></div>
+    <div class="flex-wrapper">
+        <div class="container" id="map"></div>
+    <p id="infos"></p>
+    </div>
+    
+
 
     <script id="template-places" type="x-tmpl-mustache">
         <div class="container">
@@ -45,27 +48,32 @@
             {
                 image: 'https://www.white-ibiza.com/wp-content/uploads/privilege-dome-073020122.jpg',
                 title: 'Privilege',
-                description: "<p>Lorem ipsum.</p>"
+                description: "<p>Lorem ipsum.</p>",
+                coords: {lat: 38.957857, lng: 1.408020}
             },
             {
                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSyLcUdcT-R6xKclq4F7_c3SgB1wrD92vR8qTV0Yg0NC2f4iOR',
                 title: 'Amnesia',
-                description: "<p>Lorem ipsum.</p>"
+                description: "<p>Lorem ipsum.</p>",
+                coords: {lat: 38.947609, lng: 1.408154}
             },
             {
                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxNyUO-arp4pp2BT2BQs3qsuEFSGepVTYQB2wdj8cnI2XB9g8N',
                 title: 'Cafe Mambo',
-                description: "<p>Lorem ipsum.</p>"
+                description: "<p>Lorem ipsum.</p>",
+                coords: {lat: 38.981110, lng: 1.296284}
             },
             {
                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM8TSa69lTc3sExGPQyKvQi4J4I3DlI1vwYmEZC_-Kq_ILrswv',
                 title: 'Pacha',
-                description: "<p>Lorem ipsum.</p>"
+                description: "<p>Lorem ipsum.</p>",
+                coords: {lat: 38.918459, lng: 1.443199}
             },
             {
                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSb6goVlXChQV8klTzYFWBQZrjsfyCvv-bX_llLxOxGPLgkDMp',
                 title: 'Space',
-                description: "<p>Lorem ipsum.</p>"
+                description: "<p>Lorem ipsum.</p>",
+                coords: {lat: 38.888099, lng: 1.407722}
             }
         ]
     </script>
@@ -74,6 +82,7 @@
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJWXH4za4SvHeC-S1I3PWhx5Xtvh_B8RE&callback=initMap"></script>
 </body>
 
 </html>

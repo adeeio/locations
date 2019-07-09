@@ -1,6 +1,5 @@
 @import "variables";
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,8 +9,9 @@
 body {
   background: gray;
   height: 100%;
-  
 }
+
+
 
 .carousel-cell {
   width: 100%;
@@ -37,19 +37,29 @@ body {
 }
 
 .restart {
-    position: absolute;
-    background: hsla(0, 0%, 0%, 0.3);
-    z-index: 1;
-    padding: 2px 20px;
-    font-size: 20px;
-    color: #fff;
-    left: 10px;
-    top: 10px;
-} 
-
-.progress-bar {
-    height: 20px;
-    width: 0;
-    background: rgba(216, 124, 19, 0.856);
+  position: absolute;
+  background: hsla(0, 0%, 0%, 0.3);
+  z-index: 1;
+  padding: 2px 20px;
+  font-size: 20px;
+  color: #fff;
+  left: 10px;
+  top: 10px;
 }
 
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: rgba(216, 124, 19, 0.856);
+}
+
+#map {
+  height: 100%;
+  min-height: 250px;
+  width: 100%;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+}
