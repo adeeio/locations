@@ -2,17 +2,37 @@
 
 window.initMap = function(){
     var privilege = templateData[0].coords;
-    console.log(privilege);
+    
     var map = new google.maps.Map(document.getElementById('map'), {zoom: 18, center: privilege});
 
     for(var i = 0; i < templateData.length; i++){
-        var marker = new google.maps.Marker({position: templateData[i].coords, map: map});
+        var marker = new google.maps.Marker({
+            position: templateData[i].coords,
+            map: map,
+            markerId: templateData[i].id
+            });
+        
+        marker.addListener('click', function(e){
+           
+            var draft = {
+                id: this.markerId,
+                coords: { lat: e.latLng.lat(), lng: e.latLng.lng()}
+            };
+
+            map.panTo(draft.coords);
+
+            for( var j = 0; j < templateData.length; j++) {
+                if(draft.id === templateData[j].id){
+                    var tempCellId = document.getElementById(draft.id);
+                    flkty.selectCell(tempCellId);
+                }
+            }
+           
+        });
+
+
     }
 
-    
-    marker.addListener('click', function(){
-        infos.innerHTML = "You clicked marker";
-    });
 }
 
 

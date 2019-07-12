@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <button class="restart">Restart</button>
+    <button class="restart">Reset</button>
     <div class="main-carousel">
         <div class="carousel-cell carousel-cell--image1" id="carousel-cell1">
 
@@ -30,13 +30,12 @@
     <div class="progress-bar"></div>
     <div class="flex-wrapper">
         <div class="container" id="map"></div>
-    <p id="infos"></p>
     </div>
-    
+
 
 
     <script id="template-places" type="x-tmpl-mustache">
-        <div class="container">
+        <div class="container" data-id={{id}}>
             <h2> {{ title }} </h2> 
            <img src= {{{ image }}} height="80%" width="100%">
             {{{ description }}}
@@ -49,31 +48,36 @@
                 image: 'https://www.white-ibiza.com/wp-content/uploads/privilege-dome-073020122.jpg',
                 title: 'Privilege',
                 description: "<p>Lorem ipsum.</p>",
-                coords: {lat: 38.957857, lng: 1.408020}
+                coords: { lat: 38.957857, lng: 1.408020 },
+                id: 'carousel-cell1'
             },
             {
                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSyLcUdcT-R6xKclq4F7_c3SgB1wrD92vR8qTV0Yg0NC2f4iOR',
                 title: 'Amnesia',
                 description: "<p>Lorem ipsum.</p>",
-                coords: {lat: 38.947609, lng: 1.408154}
+                coords: { lat: 38.947609, lng: 1.408154 },
+                id: 'carousel-cell2'
             },
             {
                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxNyUO-arp4pp2BT2BQs3qsuEFSGepVTYQB2wdj8cnI2XB9g8N',
                 title: 'Cafe Mambo',
                 description: "<p>Lorem ipsum.</p>",
-                coords: {lat: 38.981110, lng: 1.296284}
+                coords: { lat: 38.981110, lng: 1.296284 },
+                id: 'carousel-cell3'
             },
             {
                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM8TSa69lTc3sExGPQyKvQi4J4I3DlI1vwYmEZC_-Kq_ILrswv',
                 title: 'Pacha',
                 description: "<p>Lorem ipsum.</p>",
-                coords: {lat: 38.918459, lng: 1.443199}
+                coords: { lat: 38.918459, lng: 1.443199 },
+                id: 'carousel-cell4'
             },
             {
                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSb6goVlXChQV8klTzYFWBQZrjsfyCvv-bX_llLxOxGPLgkDMp',
                 title: 'Space',
                 description: "<p>Lorem ipsum.</p>",
-                coords: {lat: 38.888099, lng: 1.407722}
+                coords: { lat: 38.888099, lng: 1.407722 },
+                id: 'carousel-cell5'
             }
         ]
     </script>
@@ -82,7 +86,8 @@
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJWXH4za4SvHeC-S1I3PWhx5Xtvh_B8RE&callback=initMap"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJWXH4za4SvHeC-S1I3PWhx5Xtvh_B8RE&callback=initMap"></script>
 </body>
 
 </html>
