@@ -2,36 +2,36 @@
 
 
 
-window.initMap = function(){
+window.initMap = function () {
     var privilege = templateData[0].coords;
-    
-    var map = new google.maps.Map(document.getElementById('map'), {zoom: 18, center: privilege});
+
+    var map = new google.maps.Map(document.getElementById('map'), { zoom: 18, center: privilege });
 
     centerMarkerOnSlide(map);
 
-    for(var i = 0; i < templateData.length; i++){
+    for (var i = 0; i < templateData.length; i++) {
         var marker = new google.maps.Marker({
             position: templateData[i].coords,
             map: map,
             markerId: templateData[i].id
-            });
-        
-        marker.addListener('click', function(e){
-           
+        });
+
+        marker.addListener('click', function (e) {
+
             var draft = {
                 id: this.markerId,
-                coords: { lat: e.latLng.lat(), lng: e.latLng.lng()}
+                coords: { lat: e.latLng.lat(), lng: e.latLng.lng() }
             };
 
             map.panTo(draft.coords);
 
-            for( var j = 0; j < templateData.length; j++) {
-                if(draft.id === templateData[j].id){
+            for (var j = 0; j < templateData.length; j++) {
+                if (draft.id === templateData[j].id) {
                     var tempCellId = document.getElementById(draft.id);
                     flkty.selectCell(tempCellId);
                 }
             }
-           
+
         });
 
 
@@ -46,7 +46,7 @@ var templateItem = document.getElementById('template-places').innerHTML;
 var carouselCell = document.querySelectorAll('.carousel-cell');
 Mustache.parse(templateItem);
 
-for(var i = 0; i < templateData.length; i++){
+for (var i = 0; i < templateData.length; i++) {
     carouselCell[i].innerHTML = Mustache.render(templateItem, templateData[i]);
 }
 
@@ -65,18 +65,18 @@ var flkty = new Flickity(elem, {
 });
 
 
-document.querySelector('.restart').addEventListener('click', function(event){
-   
+document.querySelector('.restart').addEventListener('click', function (event) {
+
     var selector = document.querySelector('.carousel-cell--image1');
     flkty.selectCell(selector);
-    
+
 
 });
 
 
 var progressBar = document.querySelector('.progress-bar');
 
-flkty.on('scroll', function(progress) {
+flkty.on('scroll', function (progress) {
     progress = Math.max(0, Math.min(1, progress));
     progressBar.style.width = progress * 100 + '%';
 });
@@ -84,27 +84,8 @@ flkty.on('scroll', function(progress) {
 
 
 function centerMarkerOnSlide(map) {
-    flkty.on('change', function(index){
-      
-        switch(index) {
-            case 0: 
-            map.panTo(templateData[0].coords);
-            break;
-            case 1:
-            map.panTo(templateData[1].coords);
-            break;
-            case 2:
-            map.panTo(templateData[2].coords);
-            break;
-            case 3:
-            map.panTo(templateData[3].coords);
-            break;
-            case 4:
-            map.panTo(templateData[4].coords);
-            break;
-            default: return;
-        }
-    
+    flkty.on('change', function (index) {
+        map.panTo(templateData[index].coords);
     });
 }
 
