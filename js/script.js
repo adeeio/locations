@@ -1,9 +1,13 @@
 'use strict';
 
+
+
 window.initMap = function(){
     var privilege = templateData[0].coords;
     
     var map = new google.maps.Map(document.getElementById('map'), {zoom: 18, center: privilege});
+
+    centerMarkerOnSlide(map);
 
     for(var i = 0; i < templateData.length; i++){
         var marker = new google.maps.Marker({
@@ -77,4 +81,30 @@ flkty.on('scroll', function(progress) {
     progressBar.style.width = progress * 100 + '%';
 });
 
+
+
+function centerMarkerOnSlide(map) {
+    flkty.on('change', function(index){
+      
+        switch(index) {
+            case 0: 
+            map.panTo(templateData[0].coords);
+            break;
+            case 1:
+            map.panTo(templateData[1].coords);
+            break;
+            case 2:
+            map.panTo(templateData[2].coords);
+            break;
+            case 3:
+            map.panTo(templateData[3].coords);
+            break;
+            case 4:
+            map.panTo(templateData[4].coords);
+            break;
+            default: return;
+        }
+    
+    });
+}
 
